@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Footer from "./Footer";
 import Header from "./Header";
+import { motion } from "framer-motion";
 
 export default function Layout({ children, page }) {
   return (
@@ -15,7 +16,14 @@ export default function Layout({ children, page }) {
       </Head>
 
       <Header />
-      <main className="layout">{children}</main>
+      <motion.main
+        className="layout"
+        initial={{ scale: 0 }}
+        animate={{ scale: 1 }}
+        transition={{ ease: "easeOut", duration: 2 }}
+      >
+        {children}
+      </motion.main>
       <Footer />
     </>
   );
