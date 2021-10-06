@@ -1,0 +1,51 @@
+@import "./variables";
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: $thirdColor;
+  line-height: 1.375em;
+  font-weight: 300;
+  width: 100%;
+}
+
+// General tags
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+// Title
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", serif;
+  color: $secondColor;
+}
+h1 {
+  font-size: 48px;
+  line-height: 1.05em;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+h2 {
+  font-size: 36px;
+  line-height: 1.25em;
+}
+h3 {
+  font-size: 28px;
+  line-height: 1.25em;
+}
+h4 {
+  font-size: 22px;
+  line-height: 1.22em;
+}
+
+// other tags
+a {
+  color: $thirdColor;
+  text-decoration: inherit;
+}
