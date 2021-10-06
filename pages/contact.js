@@ -1,9 +1,9 @@
-import Layout from "../components/Layout";
+import Layout from "../components/layout/Layout";
 
 export default function Contact() {
   return (
-    <Layout page={"Contacte - Gite le Jardin"}>
-      <section className="contact">Contacte</section>
+    <Layout page={"Contact - Gite le Jardin"}>
+      <section className="contact">Contact</section>
     </Layout>
   );
 }

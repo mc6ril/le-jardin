@@ -1,2 +1,6 @@
 @import "./reset/reset";
 @import "./settings";
+
+// import components
+@import "./components/layout/header";
+@import "./components/layout/footer";

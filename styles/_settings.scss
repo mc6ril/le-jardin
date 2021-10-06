@@ -2,16 +2,25 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-  color: $thirdColor;
+  color: $fifthColor;
   line-height: 1.375em;
   font-weight: 300;
   width: 100%;
+  height: 100%;
 }
 
 // General tags
-.container {
+.wrapper {
   max-width: 90%;
   margin: 0 auto;
+}
+
+main {
+  height: 100%;
+  min-height: calc(100vh - 60px);
+}
+section {
+  padding: 60px 0;
 }
 
 // Title
@@ -46,6 +55,6 @@ h4 {
 
 // other tags
 a {
-  color: $thirdColor;
+  color: $fifthColor;
   text-decoration: inherit;
 }

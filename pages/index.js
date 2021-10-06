@@ -1,11 +1,11 @@
-import Layout from "../components/Layout";
+import Layout from "../components/layout/Layout";
 
 export default function Accueil() {
   return (
-    <div>
-      <Layout page={"Accueil - Gite le Jardin"}>
+    <Layout page={"Accueil - Gite le Jardin"}>
+      <section className="home">
         <h1>Bienvenue</h1>
-      </Layout>
-    </div>
+      </section>
+    </Layout>
   );
 }

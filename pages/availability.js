@@ -1,8 +1,8 @@
-import Layout from "../components/Layout";
+import Layout from "../components/layout/Layout";
 
 export default function Availability() {
   return (
-    <Layout page={"Disponibilitées - Gite le Jardin"}>
+    <Layout page={"Disponibilités - Gite le Jardin"}>
       <section className="availability">Disponibilitées</section>
     </Layout>
   );
