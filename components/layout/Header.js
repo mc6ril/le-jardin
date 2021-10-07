@@ -85,9 +85,16 @@ export default function Header() {
             animate={{ x: 0, opacity: 1 }}
             transition={{ ease: "easeOut", duration: 2.2 }}
           >
-            <option value="french">Français</option>
-            <option value="english">Anglais</option>
+            <option value="french">🇫🇷 Français</option>
+            <option value="english">󠁧󠁢󠁥󠁮󠁧🇬🇧 Anglais</option>
           </motion.select>
+        </div>
+        <div className="burger-menu">
+          <div className="spans">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
       </div>
     </header>

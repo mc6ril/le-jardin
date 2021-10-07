@@ -1,0 +1,46 @@
+@import "./variables";
+
+@media screen and (max-width: 1000px) {
+  header {
+    .wrapper {
+      max-width: 95%;
+      nav,
+      .language {
+        display: none;
+      }
+
+      .burger-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        background-color: $fifthColor;
+        border-radius: 50%;
+        cursor: pointer;
+        .spans {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          span {
+            position: absolute;
+            content: "";
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: $secondColor;
+          }
+          span:first-child {
+            transform: translateX(-10px);
+          }
+          span:last-child {
+            transform: translateX(10px);
+          }
+        }
+      }
+    }
+  }
+}
