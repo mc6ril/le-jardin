@@ -41,10 +41,6 @@ const Slider = () => {
     }
   };
 
-  const moveDot = (index) => {
-    setSlideAnim({ index: index, inProgress: false });
-  };
-
   return (
     <div className="container-slider">
       {json.map((obj, i) => {
@@ -60,18 +56,6 @@ const Slider = () => {
             />
             <BtnSlide direction={"prev"} icon={leftArrow} moveSlide={previousSlide} />
             <BtnSlide direction={"next"} icon={rigthArrow} moveSlide={nextSlide} />
-
-            <div className="container-dots">
-              {Array.from({ length: json.length }).map((item, i) => {
-                return (
-                  <button
-                    key="i"
-                    className={slideAnim.index === i + 1 ? "dot active" : "dot"}
-                    onClick={() => moveDot(i + 1)}
-                  ></button>
-                );
-              })}
-            </div>
           </div>
         );
       })}
