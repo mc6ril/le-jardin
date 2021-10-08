@@ -1,9 +1,10 @@
 .container-slider {
   max-width: 100vmax;
-  height: calc(100vh - 120px);
+  height: calc(100vh - 60px);
   position: relative;
   overflow: hidden;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: 60px;
 
   @media screen and (max-width: 700px) {
     .container-slider {
@@ -27,11 +28,9 @@
   }
 
   .btn-slide {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: #f1f1f1;
-    border: 1px solid rgba(34, 34, 34, 0.287);
+    background: none;
+    border: none;
+    color: $firstColor;
     position: absolute;
     display: flex;
     justify-content: center;
@@ -39,9 +38,9 @@
     cursor: pointer;
   }
 
-  .btn-slide img {
-    width: 20px;
-    height: 20px;
+  .btn-slide svg {
+    width: 30px;
+    height: 30px;
     pointer-events: none;
   }
   .prev {
@@ -53,5 +52,15 @@
     top: 50%;
     right: 20px;
     transform: translateY(-60%);
+  }
+  .down {
+    top: 95%;
+    right: 50%;
+    height: 60px;
+    width: 60px;
+    color: $secondColor;
+    border: 1px solid $secondColor;
+    border-radius: 50%;
+    transform: translate(50%, -50%);
   }
 }

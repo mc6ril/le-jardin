@@ -1,14 +1,9 @@
-import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const BtnSlide = ({ direction, icon, moveSlide }) => {
+const BtnSlide = ({ direction, iconName, moveSlide }) => {
   return (
     <button className={`btn-slide ${direction}`} onClick={moveSlide}>
-      <Image
-        src={icon}
-        alt="icone de déplacement du carroussel"
-        width="50px"
-        height="50px"
-      />
+      <FontAwesomeIcon icon={iconName} size="2x" />
     </button>
   );
 };
