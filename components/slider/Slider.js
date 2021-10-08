@@ -48,28 +48,44 @@ const Slider = () => {
     window.scrollTo(0, size.height);
   };
 
+  // allow me to handle the Image error by editing the width and height from the Images
+  if (!size.height || !size.width) {
+    return "";
+  }
+
   return (
     <div className="container-slider">
-      {json.map((obj, i) => {
-        return (
-          <div
-            key={obj.id}
-            className={slideAnim.index === i + 1 ? "slide active-anim" : "slide"}
-          >
-            <Image src={`/static/images/img${i + 1}.jpg`} alt={obj.title} layout="fill" />
+      {size &&
+        json.map((obj, i) => {
+          return (
+            <div
+              key={obj.id}
+              className={slideAnim.index === i + 1 ? "slide active-anim" : "slide"}
+            >
+              <Image
+                src={`/static/images/img${i + 1}.jpg`}
+                alt={obj.title}
+                layout="responsive"
+                width={size.width}
+                height={size.height}
+              />
 
-            <BtnSlide
-              direction={"prev"}
-              iconName="chevron-left"
-              moveSlide={previousSlide}
-            />
-            <BtnSlide direction={"next"} iconName="chevron-right" moveSlide={nextSlide} />
-            <button className={`btn-slide down`} onClick={() => slideDown()}>
-              <FontAwesomeIcon icon="chevron-down" size="2x" />
-            </button>
-          </div>
-        );
-      })}
+              <BtnSlide
+                direction={"prev"}
+                iconName="chevron-left"
+                moveSlide={previousSlide}
+              />
+              <BtnSlide
+                direction={"next"}
+                iconName="chevron-right"
+                moveSlide={nextSlide}
+              />
+              <button className={`btn-slide down`} onClick={() => slideDown()}>
+                <FontAwesomeIcon icon="chevron-down" size="2x" />
+              </button>
+            </div>
+          );
+        })}
     </div>
   );
 };
