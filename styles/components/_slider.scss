@@ -5,7 +5,7 @@
   position: relative;
   overflow: hidden;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  margin-bottom: 60px;
+  margin-top: -60px;
 
   .slide {
     width: 100%;
@@ -50,13 +50,13 @@
     transform: translateY(-60%);
   }
   .down {
-    top: 95%;
+    top: 85%;
     right: 50%;
     height: 60px;
     width: 60px;
     color: $secondColor;
     border: 1px solid $secondColor;
     border-radius: 50%;
-    transform: translate(50%, -50%);
+    transform: translateX(50%);
   }
 }
